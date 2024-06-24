@@ -2,14 +2,7 @@ import React from 'react';
 import { gql, useMutation } from '@apollo/client';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
-
-const INCREMENT_POST_LIKES = gql`
-  mutation IncrementPostLikes($postId: ID!) {
-    incrementPostLikes(input: { postId: $postId }) {
-      likes
-    }
-  }
-`;
+import { INCREMENT_POST_LIKES } from "../mutations/incrementPostLikes";
 
 export default function Likes({id, likes}) {
 	const token = Cookies.get('token');

@@ -3,18 +3,7 @@ import { gql, useMutation } from '@apollo/client';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import client from '../../lib/apollo';
-
-const LOGIN_USER = gql`
-  mutation LoginUser($username: String!, $password: String!) {
-    login(input: { username: $username, password: $password }) {
-      authToken
-      user {
-        id
-        name
-      }
-    }
-  }
-`;
+import { LOGIN_USER } from '../../mutations/login'
 
 export default  function Index() {
 	const [username, setUsername] = useState('');
