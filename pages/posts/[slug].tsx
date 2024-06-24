@@ -41,9 +41,11 @@ export default function Post({ post, posts, preview }) {
                 />
               </Head>
               <PostHeader
+                id={post.postId}
                 title={post.title}
                 coverImage={post.featuredImage}
                 date={post.date}
+                likes={post.postLikes.likes}
                 author={post.author}
                 categories={post.categories}
               />
