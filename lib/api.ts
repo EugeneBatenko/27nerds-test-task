@@ -124,6 +124,10 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
       excerpt
       slug
       date
+      postLikes {
+        likes
+      }
+      postId
       featuredImage {
         node {
           sourceUrl

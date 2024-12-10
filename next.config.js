@@ -17,8 +17,13 @@ module.exports = {
         protocol: protocol.slice(0, -1),
         hostname,
         port,
-        pathname: `${pathname}/**`,
+        pathname: `**`,
       },
+      {
+        protocol: 'http',
+        hostname: '1.gravatar.com',
+        pathname: `**`,
+      }
     ],
   },
 };
